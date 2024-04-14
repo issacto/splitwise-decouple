@@ -24,7 +24,6 @@ class NewKVCacheCommManager:
         self.recv_shape= tuple(dim + 1 if i == 0 else dim for i, dim in enumerate(tmp_shape))
         self.num_layers=num_layers
         self.block_size=block_size
-        self.recv_data_length= self.block_size+1
 
     def warm_up(self, isTokenWorker)->None:
         print("warming up")
